@@ -1,0 +1,155 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  color: rgb(231, 231, 0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-position 0.1s;
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  z-index: 1;
+}
+
+.fade.visible {
+  opacity: 0.2;
+}
+
+.loginForm {
+  background: rgba(31, 0, 0, 0.65);
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  width: 30%;
+  height: 40%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(231, 231, 0);
+}
+
+.loginForm h1 {
+  width: 100%;
+  border-bottom: 1px solid rgb(231, 231, 0);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 200;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.formGroup input {
+  width: 200%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(231, 231, 0);
+  border-radius: 20px;
+}
+
+.loginButton {
+  width: 50%;
+  padding: 10px;
+  background-color: #003d7e;
+  color: rgb(231, 231, 0);
+  border: 1px solid rgb(231, 231, 0);
+  border-radius: 30px;
+  height: 40px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.loginButton:hover {
+  background-color: #00607e;
+  color: aqua;
+}
+
+.notRegisteredText {
+  margin-top: 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: rgb(255, 94, 0);
+}
+
+.registerButton {
+  width: 50%;
+  padding: 10px;
+  background-color: #004e12;
+  color: rgb(231, 231, 0);
+  border: 1px solid rgb(231, 231, 0);
+  border-radius: 30px;
+  height: 40px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.registerButton:hover {
+  background-color: #218838;
+  color: #48ff00;
+}
+
+@media (max-width: 768px) {
+  .loginForm {
+    width: 80%;
+    height: auto;
+  }
+
+  .formGroup input {
+    width: 100%;
+  }
+
+  .navcontainer {
+    flex-direction: column;
+  }
+
+  .loginButton,
+  .registerButton {
+    width: 80%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .loginForm {
+    width: 50%;
+  }
+
+  .formGroup input {
+    max-width: 150%;
+  }
+
+  .loginButton,
+  .registerButton {
+    width: 60%;
+  }
+}
